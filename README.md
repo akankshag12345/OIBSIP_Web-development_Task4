@@ -15,9 +15,7 @@ Steps Performed
 Tools Used
 
 - Front-end: HTML, CSS, JavaScript
-- Back-end: Node.js, Express.js, or other server-side technology
-- Database: MySQL, MongoDB, or other database management system
-- Authentication Library: Passport.js or other authentication library
+- firebase
 - Development Environment: Visual Studio Code or any other preferred code editor
 - Version Control: Git and GitHub for version control and collaboration
 
