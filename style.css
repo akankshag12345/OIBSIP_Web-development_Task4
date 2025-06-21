@@ -1,0 +1,263 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"poppins",sans-serif;
+}
+
+body{
+    background:linear-gradient(to right, rgb(243, 49, 81), rgb(136, 136, 232));
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background:rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 420px;
+    padding: 2rem;
+    border-radius:16px;
+    box-shadow:0 4px 40px rgba(93, 93, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form{
+    margin:0 1rem;
+}
+
+.form-title{
+    font-size:2rem;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:1.5rem;
+    color: #333;
+}
+
+input{
+    color:#333;
+    width:100%;
+    background: transparent;
+    border:none;
+    border-bottom:2px solid #ccc;
+    padding:0.8rem 0.8rem 0.8rem 2.5rem;
+    font-size:1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.input-group i{
+    position:absolute;
+    color: #5d5dff;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    margin-bottom: 2 rem;
+}
+
+input:focus{
+    background-color: #5d5dff;
+    outline: none;
+}
+
+input::placeholder{
+    color:transparent;
+}
+
+input:hover{
+    border-bottom: 2px solid #5d5dff;
+}
+
+label{
+    color:#aaa;
+    position:absolute;
+    left: 2.5rem;
+    top:0.8rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+input:focus~label,
+input:not(:placeholder-shown)~label{
+    top:-1rem;
+    color:#5d5dff;
+    font-size: 0.8rem;;
+}
+
+.recover{
+    text-align: right;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.recover a{
+    text-decoration: none;
+    color: #5d5dff;
+}
+
+.recover a:hover{
+    color: #4c4cff;
+    text-decoration: underline;
+}
+
+button{
+    font-size:1rem;
+    padding:10px ;
+    border-radius:8px;
+    border:none;
+    width:100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color:white;
+    cursor:pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover{
+    background: linear-gradient(135deg, #5a67d8, #6b46c1);
+}
+
+.or{
+    font: size 0.9rem;
+    margin:1rem 0;
+    text-align:center;
+    color: #555;
+}
+
+.icons{
+    text-align:center;margin-bottom: 1rem;
+}
+
+.icons i{
+    color:#5d5dff;
+    padding:0.5rem 1rem;
+    border-radius:50%;
+    font-size:1.4rem;
+    border:2px solid #ccc;
+    margin:0 10px;
+    transition:all 0.3s ease;
+    background: #fff;
+}
+
+.icons i:hover{
+    background:#5d5dff;
+    color: white;
+    transform: scale(1.1);
+}
+
+.links{
+    text-align: center;
+    margin-top: 1rem;
+    font-size:0.95rem;
+}
+
+.links p{
+    display: inline;
+    margin-right: 5px;
+    color: #333;
+}
+
+#signUpButton, 
+#signInButton{
+    color:#5d5dff;
+    border:none;
+    background: transparent;
+    cursor: pointer;
+    font-weight:bold;
+}
+
+#signUpButton:hover, 
+#signInButton:hover {
+    text-decoration: underline;
+} 
+
+.messageDiv{
+    background-color:#5d5dff;
+    color:white;
+    padding:10px 20px;
+    margin:10px 0;
+    border-radius: 5px;
+    font: size 0.9rem;
+    opacity:0;
+    animation:fadeOut 7s forwards;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.btn.loading::after{
+    content: '.';
+    animation: dots 1s steps(4, end) infinite;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@keyframes dots{
+    0% {
+        content: '';
+    }
+    25% {
+        content: '.';
+    }
+    50% {
+        content: '..';
+    }
+    75% {
+        content: '...';
+    }
+    100% {
+        content: '';
+    }
+}
+
+.input-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 1.5px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.input-group i.toggle-password {
+    color: black;
+    right: 10px;
+    left: auto;
+}
+
+
+
+
+
